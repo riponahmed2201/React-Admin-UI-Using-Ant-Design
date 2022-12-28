@@ -14,7 +14,7 @@ function Forgotpassword() {
         <p className='text-center'>Please enter your registered email to get reset password mail.</p>
         <form>
           <Custominput type="text" label="Email address" id="email" />
-          <button className='border-0 px-3 py-2 text-white fw-bold w-100' style={{ background: "#ffd333" }} type="submit">Send Link</button>
+          <button  className='border-0 px-3 py-2 text-white fw-bold w-100 text-center text-decoration-none fs-5'  style={{ background: "#ffd333" }} type="submit">Send Link</button>
         </form>
       </div>
     </div>
