@@ -9,6 +9,7 @@ import { SiBrandfolder } from 'react-icons/si';
 import { BiCategoryAlt } from 'react-icons/bi';
 import { FaClipboardList, FaBloggerB } from 'react-icons/fa';
 import { ImBlog } from 'react-icons/im';
+import { IoIosNotifications } from 'react-icons/io';
 
 import { useNavigate } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
@@ -142,6 +143,7 @@ const MainLayout = () => {
       </Sider>
       <Layout className="site-layout">
         <Header
+          className='d-flex justify-content-between ps-3 pe-5'
           style={{
             padding: 0,
             background: colorBgContainer,
@@ -151,6 +153,21 @@ const MainLayout = () => {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
           })}
+
+          <div className='d-flex gap-4 align-items-center'>
+            <div className='position-relative'> <IoIosNotifications />
+              <span className='badge bg-warning rounded-circle p-1 position-absolute'>3</span>
+            </div>
+            <div className='d-flex gap-3 align-items-center'>
+              <div>
+                <img width={32} height={32} src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png' alt='' />
+              </div>
+              <div>
+                <h5 className='mb-0'>Admin</h5>
+                <p className='mb-0'>admin@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </Header>
         <Content
           style={{
