@@ -151,7 +151,7 @@ function Dashboard() {
 
       <div className='mt-4'>
         <h3 className='mb-5 title'>Income Statics</h3>
-        <div>
+        <div className='bg-white p-3 rounded-3'>
           <Column {...config} />
         </div>
       </div>
