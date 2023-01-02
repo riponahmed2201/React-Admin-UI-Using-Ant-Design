@@ -11,7 +11,7 @@ import { FaClipboardList, FaBloggerB } from 'react-icons/fa';
 import { ImBlog } from 'react-icons/im';
 import { IoIosNotifications } from 'react-icons/io';
 
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
@@ -107,7 +107,7 @@ const MainLayout = () => {
               label: 'Orders',
             },
             {
-              key: 'blog',
+              key: 'blogs',
               icon: <FaBloggerB className='fs-4' />,
               label: 'Blogs',
               children: [
@@ -158,13 +158,17 @@ const MainLayout = () => {
             <div className='position-relative'> <IoIosNotifications />
               <span className='badge bg-warning rounded-circle p-1 position-absolute'>3</span>
             </div>
-            <div className='d-flex gap-3 align-items-center'>
+            <div className='d-flex gap-3 align-items-center dropdown'>
               <div>
                 <img width={32} height={32} src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png' alt='' />
               </div>
-              <div>
+              <div role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 <h5 className='mb-0'>Admin</h5>
                 <p className='mb-0'>admin@gmail.com</p>
+              </div>
+              <div className='dropdown-menu' aria-labelledby="dropdownMenuLink">
+                <li><Link to="/" className="dropdown-item py-1 mb-1 " style={{ height: "auto", lineHeight: "20px" }} href="#">View Profile</Link></li>
+                <li><Link to="/" className="dropdown-item py-1 mb-1" style={{ height: "auto", lineHeight: "20px" }} href="#">Singout</Link></li>
               </div>
             </div>
           </div>
